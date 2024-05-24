@@ -55,7 +55,7 @@ class _firstPageState extends State<firstPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).pushNamed('/look');
+                  Navigator.of(context).pushReplacementNamed('/look');
                 },
                 child: Container(
                   height: height*0.45,

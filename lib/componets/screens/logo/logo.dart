@@ -16,7 +16,7 @@ class _logoPageState extends State<logoPage> {
     double width=MediaQuery.of(context).size.width;
     Timer(Duration(seconds: 3), () {
 
-      Navigator.of(context).pushNamed('/first');
+      Navigator.of(context).pushReplacementNamed('/first');
 
     });
 

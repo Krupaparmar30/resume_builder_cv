@@ -170,7 +170,7 @@ class _loginPageState extends State<loginPage> {
                  {
                    email=txtEmail.text;
                    pass=txtPass.text;
-                   Navigator.of(context).pushNamed('/logo');
+                   Navigator.of(context).pushReplacementNamed('/logo');
                  }
 
 

@@ -434,7 +434,7 @@ class _lookPageState extends State<lookPage> {
                   //   nameMenu=txtNameP.text;
                   //   Navigator.of(context).pushNamed('/tab');
                   // }
-                  Navigator.of(context).pushNamed('/tab');
+                  Navigator.of(context).pushReplacementNamed('/tab');
                 },
                 child: Container(
                   height: height*0.1,
