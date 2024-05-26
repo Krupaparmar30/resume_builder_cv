@@ -31,6 +31,8 @@ A new Flutter project.
 
 
 </p>
-https://github.com/Krupaparmar30/resume_builder_cv/assets/149374671/d8d6a974-575d-496a-a219-007cfc08d569
+
+https://github.com/Krupaparmar30/resume_builder_cv/assets/149374671/cafc623d-66d2-4222-9aa6-c4b0523e640b
+
 
 
