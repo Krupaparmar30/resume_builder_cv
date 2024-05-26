@@ -28,11 +28,11 @@ class _project2PageState extends State<project2Page> {
       appBar: AppBar(
 
         title: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(2.0),
           child: Center(
             child: Container(
               height: height*0.4,
-              width: width*0.7,
+              width: width*0.999,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   gradient: LinearGradient(
@@ -321,13 +321,15 @@ class _project2PageState extends State<project2Page> {
                       proRole=txtRole.text;
                       proTeam=txtTeam.text;
                       proExperitise=txtExperitise.text;
-                      //  Navigator.of(context).pushNamed('/sign');
+
                     }
                     proTitle=txtTitle.text;
                     proDuration=txtDuration.text;
                     proRole=txtRole.text;
                     proTeam=txtTeam.text;
                     proExperitise=txtExperitise.text;
+                    pdfList.add(
+                        '${proTitle} ${proDuration} ${proRole} ${proTeam} ${proExperitise}');
                   },
 
                   child: Container(

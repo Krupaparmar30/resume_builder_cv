@@ -35,6 +35,19 @@ String proRole='nothing entered!!!';
 String proTeam='nothing entered!!!';
 String proExperitise='nothing entered!!!';
 
+String skills='nothing entered!!!';
+String xyz='nothing entered!!!';
+
+String company='nothing entered!!!';
+String position='nothing entered!!!';
+String period='nothing entered!!!';
+String city='nothing entered!!!';
+
+
+String achivName='nothing entered!!!';
+String achivYear='nothing entered!!!';
+String achivDetails='nothing entered!!!';
+
 
 
 
@@ -54,3 +67,4 @@ List objectList=[
     'name':'dfcgvhbjnmk',
   }
 ];
+List pdfList=[];

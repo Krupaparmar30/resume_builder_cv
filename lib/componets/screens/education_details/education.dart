@@ -17,13 +17,14 @@ class _educationPageState extends State<educationPage> {
       appBar: AppBar(
 
         title: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(5.0),
           child: Center(
             child: Container(
               height: height*0.4,
-              width: width*0.7,
+              width: width*0.999,
+              
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                 borderRadius: BorderRadius.circular(20),
                   gradient: LinearGradient(
                       colors: [
                         darkColor,

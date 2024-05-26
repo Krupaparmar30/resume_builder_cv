@@ -66,7 +66,7 @@ class _loginPageState extends State<loginPage> {
                    {
                      return 'value should be more than 8';
                    }
-                   else if(!value.contains('@email.com'))
+                   else if(!value.contains('@gmail.com'))
                    {
                      return 'field the @email.com';
                    }
@@ -79,7 +79,7 @@ class _loginPageState extends State<loginPage> {
 
                  controller: txtEmail,
                decoration: InputDecoration(
-                 labelText: 'Username / Email',
+                 labelText: 'Username / Gmail',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                       borderSide: BorderSide(

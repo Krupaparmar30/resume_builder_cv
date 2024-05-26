@@ -72,11 +72,11 @@ class _careerPageState extends State<careerPage> {
       appBar: AppBar(
 
         title: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(2.0),
           child: Center(
             child: Container(
               height: height*0.4,
-              width: width*0.7,
+              width: 400,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   gradient: LinearGradient(
@@ -103,180 +103,184 @@ class _careerPageState extends State<careerPage> {
 
       body: Form(
         key: formKey3,
-        child: Column(
-          children: [
-            SizedBox(
-              height: height*0.02,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 240),
-              child: Text('Objective',style: TextStyle(
-                  fontSize: 18,fontWeight: FontWeight.w800
-              ),),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextFormField(
-                controller: txtObjective,
-                onChanged: (value) {
-
-
-                  setState(() {
-                    obj=value;
-                  });
-                },
-                validator: (value) {
-                  if(value!.isEmpty)
-                  {
-                    return 'field must be requried!';
-                  }
-                },
-
-                maxLines: 4,
-                textInputAction: TextInputAction.next,
-                decoration: InputDecoration(
-
-                    labelText: 'Objective',
-                    prefixIcon: GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/select objective');
-
-                        },
-
-
-
-                        child: Icon(Icons.note_alt)),
-
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                            color: primaryColor,
-                            width:  width*0.0050
-                        )
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                            color: primaryColor,
-                            width:  width*0.0050
-                        )
-                    ),focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                        color: primaryColor,
-                        width:  width*0.0060
-                    )
-                )
-                ),
-
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              SizedBox(
+                height: height*0.02,
               ),
-            ),
-
-            SizedBox(
-              height: height*0.02,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 180),
-              child: Text('Career Summary',style: TextStyle(
-                  fontSize: 18,fontWeight: FontWeight.w800
-              ),),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextFormField(
-                controller: txtCareer,
-                onChanged: (value) {
-                  career=value;
-                },
-                validator: (value) {
-                  if(value!.isEmpty)
-                  {
-                    return 'field must be requried!';
-                  }
-                },
-
-
-
-                maxLines: 4,
-
-                decoration: InputDecoration(
-
-
-                    labelText: 'Career Summary',
-
-                    prefixIcon: GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/select objective');
-
-                        },
-
-
-
-                        child: Icon(Icons.note_alt)),
-
-
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                            color: primaryColor,
-                            width:  width*0.0050
-                        )
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(
-                            color: primaryColor,
-                            width:  width*0.0050
-                        )
-                    ),focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(
-                        color: primaryColor,
-                        width:  width*0.0060
-                    )
-                )
-                ),
-
+              Padding(
+                padding: const EdgeInsets.only(right: 240),
+                child: Text('Objective',style: TextStyle(
+                    fontSize: 18,fontWeight: FontWeight.w800
+                ),),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  controller: txtObjective,
+                  onChanged: (value) {
 
-            GestureDetector(
-              onTap: () {
-                bool responce=formKey3.currentState!.validate();
-                if(responce)
-                {
+
+                    setState(() {
+                      obj=value;
+                    });
+                  },
+                  validator: (value) {
+                    if(value!.isEmpty)
+                    {
+                      return 'field must be requried!';
+                    }
+                  },
+
+                  maxLines: 4,
+                  textInputAction: TextInputAction.next,
+                  decoration: InputDecoration(
+
+                      labelText: 'Objective',
+                      prefixIcon: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/select objective');
+
+                          },
+
+
+
+                          child: Icon(Icons.note_alt)),
+
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                              color: primaryColor,
+                              width:  width*0.0050
+                          )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                              color: primaryColor,
+                              width:  width*0.0050
+                          )
+                      ),focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                          color: primaryColor,
+                          width:  width*0.0060
+                      )
+                  )
+                  ),
+
+                ),
+              ),
+
+              SizedBox(
+                height: height*0.02,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 180),
+                child: Text('Career Summary',style: TextStyle(
+                    fontSize: 18,fontWeight: FontWeight.w800
+                ),),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  controller: txtCareer,
+                  onChanged: (value) {
+                    career=value;
+                  },
+                  validator: (value) {
+                    if(value!.isEmpty)
+                    {
+                      return 'field must be requried!';
+                    }
+                  },
+
+
+
+                  maxLines: 4,
+
+                  decoration: InputDecoration(
+
+
+                      labelText: 'Career Summary',
+
+                      prefixIcon: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/select objective');
+
+                          },
+
+
+
+                          child: Icon(Icons.note_alt)),
+
+
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                              color: primaryColor,
+                              width:  width*0.0050
+                          )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          borderSide: BorderSide(
+                              color: primaryColor,
+                              width:  width*0.0050
+                          )
+                      ),focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(
+                          color: primaryColor,
+                          width:  width*0.0060
+                      )
+                  )
+                  ),
+
+                ),
+              ),
+
+              GestureDetector(
+                onTap: () {
+                  bool responce=formKey3.currentState!.validate();
+                  if(responce)
+                  {
+                    obj=txtObjective.text;
+                    career=txtCareer.text;
+
+                    pdfList.add(
+                        '${obj} ${career} ');
+                  }
                   obj=txtObjective.text;
                   career=txtCareer.text;
 
-                  //  Navigator.of(context).pushNamed('/sign');
-                }
-                obj=txtObjective.text;
-                career=txtCareer.text;
+                },
+                child: Container(
+                  height: height*0.09,
+                  width: width*0.4,
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [
+                            darkColor,
+                            primaryColor,
+                            primaryColor,
+                            primaryColor,
+                          ]
+                      ),
+                    borderRadius: BorderRadius.circular(10)
 
-              },
-              child: Container(
-                height: height*0.09,
-                width: width*0.4,
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        colors: [
-                          darkColor,
-                          primaryColor,
-                          primaryColor,
-                          primaryColor,
-                        ]
-                    ),
-                  borderRadius: BorderRadius.circular(10)
-              
+                  ),
+                  child: Center(
+                    child: Text('Save',style: TextStyle(
+                      color: Colors.white,fontSize: 22
+                    ),),
+                  ),
                 ),
-                child: Center(
-                  child: Text('Save',style: TextStyle(
-                    color: Colors.white,fontSize: 22
-                  ),),
-                ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
 

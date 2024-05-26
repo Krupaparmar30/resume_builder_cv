@@ -1,6 +1,8 @@
 
 
 
+
+
 import 'package:flutter/material.dart';
 import 'package:resume_builder_cv/componets/screens/TabBarPage/TabBar.dart';
 
@@ -18,16 +20,20 @@ import 'package:resume_builder_cv/componets/screens/login_page/login.dart';
 import 'package:resume_builder_cv/componets/screens/logo/logo.dart';
 import 'package:resume_builder_cv/componets/screens/menu2_page/menu2_page.dart';
 import 'package:resume_builder_cv/componets/screens/menuPage/menu_page.dart';
+import 'package:resume_builder_cv/componets/screens/pdf_screen/pdf.dart';
 import 'package:resume_builder_cv/componets/screens/project_details/project.dart';
 import 'package:resume_builder_cv/componets/screens/project_details/project2.dart';
 import 'package:resume_builder_cv/componets/screens/select_objective/select_objective.dart';
 import 'package:resume_builder_cv/componets/screens/sign_in/sign_in.dart';
 import 'package:resume_builder_cv/componets/screens/skill_details/skill.dart';
 import 'package:resume_builder_cv/componets/screens/skill_details/skill2.dart';
+import 'package:resume_builder_cv/componets/screens/spalsh_page/spalsh.dart';
 
 class AppRoutes{
   static Map <String, Widget Function(BuildContext)> routes={
-    '/':(context) => loginPage(),
+
+  '/':(context)=>splshPage(),
+    '/login':(context) => loginPage(),
      //'/sign':(context)=>signinPage(),
      '/details':(context)=>detailPage(),
      '/logo':(context)=>logoPage(),
@@ -50,5 +56,6 @@ class AppRoutes{
      '/achievement':(context)=>achievementPage(),
      '/achievement2':(context)=>achievement2Page(),
      '/photos':(context)=>photoPage(),
+    '/pdf':(context)=>pdfPage(),
   };
 }

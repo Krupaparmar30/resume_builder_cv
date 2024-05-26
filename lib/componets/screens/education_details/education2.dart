@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -53,27 +55,7 @@ class _education2PageState extends State<education2Page> {
             ),
           ),
         ),
-        actions: [
-          ElevatedButton(onPressed: () {
-            TextEditingController txtDegree =TextEditingController();
-            TextEditingController txtSchool=TextEditingController();
-            TextEditingController txtUniver=TextEditingController();
-            TextEditingController txtResult=TextEditingController();
-            // setState(() {
-            //   eduDegree = txtDegree.text;
-            //   eduSchool=txtSchool.text;
-            //   eduUniver = txtUniver.text;
-            //   eduResult = txtResult.text;
-setState(() {
-  ControllerList.add(ControllerModel(txtDegree: txtDegree));
-  ControllerList.add(ControllerModel(txtSchool: txtSchool));
-  ControllerList.add(ControllerModel(txtUniver: txtUniver));
-  ControllerList.add(ControllerModel(txtResult: txtResult));
-});
 
-
-          }, child: Icon(Icons.add))
-        ],
 
       ),
                 body: SingleChildScrollView(
@@ -99,8 +81,8 @@ setState(() {
                               child: Column(
                                 children: [
                                   box('Degree',ControllerList[index].txtDegree),
-                                  box('School',ControllerList[index].txtSchool),
-                                  box('Univer',ControllerList[index].txtUniver),
+                                  box('School/Univercity',ControllerList[index].txtSchool),
+                                  box('Pass Out Date',ControllerList[index].txtUniver),
                                   box('Result',ControllerList[index].txtResult),
                                 ],
                               )
@@ -113,272 +95,7 @@ setState(() {
 
                         ),
                         ),
-                        // SizedBox(
-                        //   height: height*0.02,
-                        // ),
-                        // Padding(
-                        //   padding: const EdgeInsets.only(right: 200),
-                        //   child: Text('Degree/Course',style: TextStyle(
-                        //       fontSize: 18,fontWeight: FontWeight.w800
-                        //   ),),
-                        // ),
-                        // Padding(
-                        //   padding: const EdgeInsets.all(10.0),
-                        //   child: TextFormField(
-                        //     controller: txtDegree,
-                        //     onChanged: (value) {
-                        //       setState(() {
-                        //         eduDegree=value;
-                        //         });
-                        //
-                        //     },
-                        //     validator: (value) {
-                        //       if(value!.isEmpty)
-                        //       {
-                        //         return 'field must be requried!';
-                        //       }
-                        //     },
-                        //
-                        //
-                        //     decoration: InputDecoration(
-                        //         labelText: 'Degree/Course',
-                        //         hintText: 'Master in Flutter Development',
-                        //         border: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(
-                        //                 color: primaryColor,
-                        //                 width:  width*0.0050
-                        //             )
-                        //         ),
-                        //         enabledBorder: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(
-                        //                 color: primaryColor,
-                        //                 width:  width*0.0050
-                        //             )
-                        //         ),focusedBorder: OutlineInputBorder(
-                        //         borderRadius: BorderRadius.circular(10),
-                        //         borderSide: BorderSide(
-                        //             color: primaryColor,
-                        //             width:  width*0.0060                              )
-                        //     )
-                        //     ),
-                        //   ),
-                        // ),
-                        //
-                        // SizedBox(
-                        //   height: height*0.02,
-                        // ),
-                        // Padding(
-                        //   padding: const EdgeInsets.only(right: 200),
-                        //   child: Text('Collage/School',style: TextStyle(
-                        //       fontSize: 18,fontWeight: FontWeight.w800
-                        //   ),),
-                        // ),
-                        // Padding(
-                        //   padding: const EdgeInsets.all(10.0),
-                        //   child: TextFormField(
-                        //     controller: txtSchool,
-                        //     onChanged: (value) {
-                        //       eduSchool=value;
-                        //     },
-                        //     validator: (value) {
-                        //       if(value!.isEmpty)
-                        //       {
-                        //         return 'field must be requried!';
-                        //       }
-                        //     },
-                        //
-                        //
-                        //     decoration: InputDecoration(
-                        //         labelText: 'Course',
-                        //         hintText: 'MMaster in flutter devloping ',
-                        //         border: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(
-                        //                 color: primaryColor,
-                        //                 width:  width*0.0050
-                        //             )
-                        //         ),
-                        //         enabledBorder: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(
-                        //                 color: primaryColor,
-                        //                 width:  width*0.0050
-                        //             )
-                        //         ),focusedBorder: OutlineInputBorder(
-                        //         borderRadius: BorderRadius.circular(10),
-                        //         borderSide: BorderSide(
-                        //             color: primaryColor,
-                        //             width:  width*0.0060
-                        //         )
-                        //     )
-                        //     ),
-                        //   ),
-                        // ),
-                        //
-                        // SizedBox(
-                        //   height: height*0.02,
-                        // ),
-                        // Padding(
-                        //   padding: const EdgeInsets.only(right: 200),
-                        //   child: Text('Univercity/Borad',style: TextStyle(
-                        //       fontSize: 18,fontWeight: FontWeight.w800
-                        //   ),),
-                        // ),
-                        // Padding(
-                        //   padding: const EdgeInsets.all(10.0),
-                        //   child: TextFormField(
-                        //     controller: txtUniver,
-                        //     onChanged: (value) {
-                        //       eduUniver=value;
-                        //     },
-                        //     validator: (value) {
-                        //       if(value!.isEmpty)
-                        //       {
-                        //         return 'field must be requried!';
-                        //       }
-                        //     },
-                        //
-                        //
-                        //     decoration: InputDecoration(
-                        //         labelText: 'Univercity/Borad',
-                        //         hintText: 'Gseb',
-                        //         border: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(
-                        //                 color: primaryColor,
-                        //                 width:  width*0.0050
-                        //             )
-                        //         ),
-                        //         enabledBorder: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.circular(10),
-                        //             borderSide: BorderSide(
-                        //                 color: primaryColor,
-                        //                 width:  width*0.0050
-                        //             )
-                        //         ),focusedBorder: OutlineInputBorder(
-                        //         borderRadius: BorderRadius.circular(10),
-                        //         borderSide: BorderSide(
-                        //             color: primaryColor,
-                        //             width:  width*0.0060
-                        //         )
-                        //     )
-                        //     ),
-                        //   ),
-                        // ),
-                        //
-                        // SizedBox(
-                        //   height: height*0.02,
-                        // ),
-                        // Padding(
-                        //   padding: const EdgeInsets.only(right: 250),
-                        //   child: Text('Result',style: TextStyle(
-                        //       fontSize: 18,fontWeight: FontWeight.w800
-                        //   ),),
-                        // ),
-                        // SizedBox(
-                        //   height: height*0.02,
-                        // ),
-                        //            Padding(
-                        //              padding: const EdgeInsets.all(10.0),
-                        //              child: Container(
-                        //                                 height: height*0.5,
-                        //                                 width: width*0.99,
-                        //                                 decoration: BoxDecoration(
-                        //                                   color: Colors.white,
-                        //                                   borderRadius: BorderRadius.circular(10),
-                        //                                   boxShadow: [
-                        //                                     BoxShadow(
-                        //                                       offset: Offset(0,2),
-                        //                                       spreadRadius: 2,
-                        //                                       blurRadius: 2,
-                        //                                       color: Colors.grey
-                        //                                     )
-                        //                                   ]
-                        //                                 ),
-                        //                                 child:SingleChildScrollView(
-                        //                                   scrollDirection: Axis.vertical,
-                        //                                   child: Column(
-                        //                                     children: [
-                        //                                       SizedBox(
-                        //                                         height: height*0.02,
-                        //                                       ),
-                        //                                       Padding(
-                        //                                         padding: const EdgeInsets.all(10.0),
-                        //                                         child: TextFormField(
-                        //                                           controller: txtResult,
-                        //                                           onChanged: (value) {
-                        //                                             eduResult=value;
-                        //                                           },
-                        //                                           validator: (value) {
-                        //                                             if(value!.isEmpty)
-                        //                                             {
-                        //                                               return 'field must be requried!';
-                        //                                             }
-                        //                                           },
-                        //
-                        //
-                        //                                           decoration: InputDecoration(
-                        //              labelText: 'Univercity/Borad',
-                        //              hintText: 'Gseb',
-                        //              border: OutlineInputBorder(
-                        //                  borderRadius: BorderRadius.circular(10),
-                        //                  borderSide: BorderSide(
-                        //                      color: primaryColor,
-                        //                      width:  width*0.0050
-                        //                  )
-                        //              ),
-                        //              enabledBorder: OutlineInputBorder(
-                        //                  borderRadius: BorderRadius.circular(10),
-                        //                  borderSide: BorderSide(
-                        //                      color: primaryColor,
-                        //                      width:  width*0.0050
-                        //                  )
-                        //              ),focusedBorder: OutlineInputBorder(
-                        //              borderRadius: BorderRadius.circular(10),
-                        //              borderSide: BorderSide(
-                        //                  color: primaryColor,
-                        //                  width:  width*0.0060
-                        //              )
-                        //                                           )
-                        //                                           ),
-                        //                                         ),
-                        //                                       ),
-                        //                                       RadioListTile(value: 'pass', groupValue: result, onChanged: (value) {
-                        //                                         setState(() {
-                        //                                           result=value!;
-                        //                                         });
-                        //
-                        //
-                        //                                       },title: Text('Percentage'),),
-                        //                                       RadioListTile(value: 'OK', groupValue: result, onChanged: (value) {
-                        //                                         setState(() {
-                        //                                           result=value!;
-                        //                                         });
-                        //
-                        //
-                        //                                       },title: Text('CGPA'),),
-                        //                                       SizedBox(
-                        //                                         height: 10,
-                        //                                       ),
-                        //                                       Text('Selecting Year Of the Passing'),
-                        //                                       ListTile(
-                        //                                         title: Text('Selecting Year Of the Passing'),
-                        //
-                        //
-                        //                                       ),
-                        //
-                        //
-                        //                                     ],
-                        //                                   ),
-                        //                                 ) ,
-                        //
-                        //              ),
-                        //            ),
-                        // SizedBox(
-                        //   height: height*0.02,
-                        // ),
+
                         GestureDetector(
                           onTap: () {
                             bool responce=formKeyEdu.currentState!.validate();
@@ -388,12 +105,15 @@ setState(() {
                                 eduSchool=txtSchool.text;
                                 eduUniver=txtUniver.text;
                                 eduResult=txtResult.text;
-                                //  Navigator.of(context).pushNamed('/sign');
+
                               }
                               eduDegree=txtDegree.text;
                               eduSchool=txtSchool.text;
                               eduUniver=txtUniver.text;
                               eduResult=txtResult.text;
+
+                            pdfList.add(
+                                '${eduDegree} ${eduSchool} ${eduUniver} ${eduResult} ');
                               },
                           child: Container(
                             height: height*0.09,
@@ -414,7 +134,23 @@ setState(() {
                                   color: Colors.white,fontSize: 22
                               )),
                             ),),
-                        )
+                        ),
+                        FloatingActionButton( onPressed: () {
+                          TextEditingController txtDegree =TextEditingController();
+                          TextEditingController txtSchool=TextEditingController();
+                          TextEditingController txtUniver=TextEditingController();
+                          TextEditingController txtResult=TextEditingController();
+
+                          setState(() {
+                            ControllerList.add(ControllerModel(txtDegree: txtDegree));
+                            ControllerList.add(ControllerModel(txtSchool: txtSchool));
+                            ControllerList.add(ControllerModel(txtUniver: txtUniver));
+                            ControllerList.add(ControllerModel(txtResult: txtResult));
+                          }
+                          );
+
+
+                        }, child: Icon(Icons.add))
                       ],
                     ),
                   ),
@@ -483,60 +219,8 @@ Column box(String labelText,TextEditingController? controller)
           ),
         ),
 
+
       ],
-
-  );
-}
-
-Column box2(String labelText,TextEditingController? controller)
-{
-  return Column(
-    children: [
-      Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: TextFormField(
-
-          // onChanged: (value) {
-          //   setState(() {
-          //     eduDegree=value;
-          //     });
-          //
-          // },
-          validator: (value) {
-            if(value!.isEmpty)
-            {
-              return 'field must be requried!';
-            }
-          },
-
-
-          decoration: InputDecoration(
-              labelText: labelText,
-              hintText: 'Master in Flutter Development',
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                      color: primaryColor,
-                      width: 1
-                  )
-              ),
-              enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                      color: primaryColor,
-                      width: 1
-                  )
-              ),focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(
-                  color: primaryColor,
-                  width:2                     )
-          )
-          ),
-        ),
-      ),
-
-    ],
 
   );
 }

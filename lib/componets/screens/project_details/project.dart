@@ -17,11 +17,11 @@ class _projectPageState extends State<projectPage> {
       appBar: AppBar(
 
         title: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(5.0),
           child: Center(
             child: Container(
               height: height*0.4,
-              width: width*0.7,
+              width: width*0.999,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   gradient: LinearGradient(

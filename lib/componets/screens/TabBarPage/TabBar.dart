@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:resume_builder_cv/componets/screens/achievement_details/achievement.dart';
 import 'package:resume_builder_cv/componets/screens/add_photos/photo.dart';
@@ -5,9 +6,11 @@ import 'package:resume_builder_cv/componets/screens/career/career.dart';
 import 'package:resume_builder_cv/componets/screens/education_details/education.dart';
 import 'package:resume_builder_cv/componets/screens/experience_details/experience.dart';
 import 'package:resume_builder_cv/componets/screens/menu2_page/menu2_page.dart';
+import 'package:resume_builder_cv/componets/screens/pdf_screen/pdf.dart';
 import 'package:resume_builder_cv/componets/screens/project_details/project.dart';
 import 'package:resume_builder_cv/componets/screens/skill_details/skill.dart';
 import 'package:resume_builder_cv/utils/COLORS.DART.dart';
+import 'package:resume_builder_cv/utils/globle/globle.dart';
 
 class TabBarPage extends StatefulWidget {
   const TabBarPage({super.key});
@@ -20,7 +23,7 @@ class _TabBarPageState extends State<TabBarPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 8,
+      length: 9,
       child: Scaffold(
         bottomNavigationBar: TabBar(
             isScrollable: true,
@@ -121,6 +124,21 @@ class _TabBarPageState extends State<TabBarPage> {
                   ],
 
                 ),
+              ),
+              Tab(
+                child: Row(
+                  children: [
+                    GestureDetector(onTap: () {
+                      pdfList.add;
+                      Navigator.of(context).pushNamed('/pdf');
+                    },child: Icon(Icons.photo,color: primaryColor,)),
+                    Text('Preview',style: TextStyle(
+                        color: primaryColor
+                    ),),
+
+                  ],
+
+                ),
               )
 
             ]
@@ -135,7 +153,8 @@ class _TabBarPageState extends State<TabBarPage> {
            projectPage(),
           experiencePage(),
            achievementPage(),
-            photoPage()
+            photoPage(),
+            pdfPage()
           ],
         ),
       ),

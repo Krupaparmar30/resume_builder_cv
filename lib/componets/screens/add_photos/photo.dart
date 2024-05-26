@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:resume_builder_cv/utils/COLORS.DART.dart';
@@ -114,47 +115,11 @@ class _photoPageState extends State<photoPage> {
           SizedBox(
             height: 30,
           ),
-          // Center(
-          //   child: Container(
-          //     height: 100,
-          //     width: 100,
-          //     decoration: BoxDecoration(
-          //       color: primaryColor
-          //     ),
-          //   ),
-          // )
-          // ,
+
           SizedBox(
             height: 30,
           ),
-          // Center(
-          //   child: GestureDetector(
-          //
-          //     child: Container(
-          //       height: 50,
-          //       width: 300,
-          //       decoration: BoxDecoration(
-          //           borderRadius: BorderRadius.circular(10),
-          //           // gradient: LinearGradient(
-          //           //     colors: [
-          //           //       darkColor,
-          //           //       primaryColor,
-          //           //       primaryColor,
-          //           //       primaryColor,
-          //           //     ]
-          //           // )
-          //       ),
-          //
-          //
-          //       child: Center(
-          //         child: Text('Update your photo',style: TextStyle(
-          //             color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold
-          //         ),),
-          //       ),
-          //
-          //     ),
-          //   ),
-          // ),
+
           CircleAvatar(
             backgroundColor: Colors.pink,
             radius: 80,
@@ -179,7 +144,38 @@ class _photoPageState extends State<photoPage> {
                 });
 
               }, icon: Icon(Icons.photo,size: 40,color: Color(0XFF1b5bb5),)),
+
             ],
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed('/pdf');
+            },
+            child: Container(
+              height: 70,
+              width: 180,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  gradient: LinearGradient(
+                      colors: [
+                        darkColor,
+                        primaryColor,
+                        primaryColor,
+                        primaryColor,
+                      ]
+                  )
+              ),
+
+              child: Center(
+                child: Text('Save',style: TextStyle(
+                    color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold
+                ),),
+              ),
+
+            ),
           ),
         ],
       ),
