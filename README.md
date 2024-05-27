@@ -37,8 +37,7 @@ https://github.com/Krupaparmar30/resume_builder_cv/assets/149374671/cafc623d-66d
 
 
 https://github.com/Krupaparmar30/resume_builder_cv/assets/149374671/d3fd0084-7bed-4548-bb73-a87f6a221a65
-
-
+# Main video
 
 https://github.com/Krupaparmar30/resume_builder_cv/assets/149374671/488004b8-7c8e-4bb0-a1ce-5aca70723e96
 
